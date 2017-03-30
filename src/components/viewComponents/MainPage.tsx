@@ -13,5 +13,7 @@ export const MainPage = function(props: HelloProps){
         <h1>
             Hello From the main page
         </h1>
+        <div className="page-container">
+        </div>
     </div>
 }
