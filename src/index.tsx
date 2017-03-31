@@ -1,9 +1,15 @@
+//Libs
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import {Router, Route, hashHistory} from "react-router";
+import {Location} from "history";
 
-import { MainPage } from "./components/viewComponents/MainPage";
+//Components
+import MainPage from "./components/viewComponents/MainPage";
 
 ReactDOM.render(
-    <MainPage compiler="TypeScript" framework="React" />,
+    <Router history={hashHistory}>
+        <Route path='/' component={MainPage}></Route>
+    </Router>,
     document.getElementById("example")
 );

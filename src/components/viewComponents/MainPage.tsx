@@ -1,19 +1,11 @@
-//deps
 import * as React from "react";
 
-//import components
+interface HelloProps { compiler: string; framework: string; }
 
-//Stylesheets
-import "../../stylesheets/main.scss";
-
-export interface HelloProps { compiler: string; framework: string; }
-
-export const MainPage = function(props: HelloProps){
-    return <div className="ApplciationContainer">
-        <h1>
-            Hello From the main page
-        </h1>
-        <div className="page-container">
-        </div>
-    </div>
+// 'HelloProps' describes the shape of props.
+// State is never set so we use the 'undefined' type.
+export default class MainPage extends React.Component<HelloProps, undefined> {
+    render() {
+        return <h1>Hello from {this.props.compiler} and {this.props.framework}!</h1>;
+    }
 }
