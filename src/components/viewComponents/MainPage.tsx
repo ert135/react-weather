@@ -1,11 +1,18 @@
+//Libs
 import * as React from "react";
 
-interface HelloProps { compiler: string; framework: string; }
+//Components
+import InputForm from "../InputForm";
 
-// 'HelloProps' describes the shape of props.
-// State is never set so we use the 'undefined' type.
-export default class MainPage extends React.Component<HelloProps, undefined> {
+//Stylesheets
+import "../../stylesheets/main.scss";
+
+interface MainPageProps { compiler: string; framework: string; }
+
+export default class MainPage extends React.Component<MainPageProps, undefined> {
     render() {
-        return <h1>Hello from {this.props.compiler} and {this.props.framework}!</h1>;
+        return <div className="MainPage">
+            <InputForm/>
+        </div>
     }
 }

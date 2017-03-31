@@ -22,7 +22,7 @@ module.exports = {
             { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
 
             // Load stylesheets into bundle
-            { test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"]}
+            { test: /\.scss$/, loaders: ["react-hot-loader","style-loader", "css-loader", "sass-loader"]}
         ]
     },
 

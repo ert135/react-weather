@@ -11,5 +11,5 @@ ReactDOM.render(
     <Router history={browserHistory}>
         <Route path='/' component={MainPage}></Route>
     </Router>,
-    document.getElementById("example")
+    document.getElementById("app")
 );
