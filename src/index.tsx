@@ -2,13 +2,13 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {Router, Route, hashHistory} from "react-router";
-import {Location} from "history";
+import { browserHistory } from 'react-router'
 
 //Components
 import MainPage from "./components/viewComponents/MainPage";
 
 ReactDOM.render(
-    <Router history={hashHistory}>
+    <Router history={browserHistory}>
         <Route path='/' component={MainPage}></Route>
     </Router>,
     document.getElementById("example")
